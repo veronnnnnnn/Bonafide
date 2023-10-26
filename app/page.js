@@ -13,16 +13,16 @@ import { FaGlobe } from 'react-icons/fa';
 
 export default function Home() {
   const router = useRouter();
-  const [viewerCount, setViewerCount] = useState(
-    typeof window !== 'undefined' ? parseInt(localStorage.getItem('viewerCount')) || 0 : 0
-  );
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const updatedViewerCount = viewerCount + 1;
-      setViewerCount(updatedViewerCount);
-      localStorage.setItem('viewerCount', updatedViewerCount);
-    }
-  }, []);
+  // const [viewerCount, setViewerCount] = useState(
+  //   typeof window !== 'undefined' ? parseInt(localStorage.getItem('viewerCount')) || 0 : 0
+  // );
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     const updatedViewerCount = viewerCount + 1;
+  //     setViewerCount(updatedViewerCount);
+  //     localStorage.setItem('viewerCount', updatedViewerCount);
+  //   }
+  // }, []);
 
   return (
     <div className="w-full h-full top-0 left-0">
@@ -212,9 +212,14 @@ export default function Home() {
       Join Us
     </a>
     <p className="font-montserrat text-xl font-semibold text-yellow-950 text-center">
-      Page Views:
-    </p>
-    <h2 className="font-montserrat text-4xl xl:text-5xl font-bold text-yellow-950 text-center my-2">{viewerCount}</h2>
+              along with other
+            </p>
+            <h2 className="font-montserrat text-4xl xl:text-5xl font-bold text-yellow-950 text-center my-2">
+              505
+            </h2>
+            <p className="font-montserrat text-xl font-semibold text-yellow-950 text-center">
+              people who joined
+            </p>
   </div>
   <style jsx>{`
   @media (max-width: 768px) {
