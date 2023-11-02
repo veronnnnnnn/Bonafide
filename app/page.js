@@ -11,8 +11,24 @@ import { FaFacebook } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
 
+
 export default function Home() {
+  const apiKey = process.env.NEXT_PUBLIC_API_KEY;
+
   const router = useRouter();
+  const fetchData = async () => {
+    try {
+      const response = await fetch('https://api.example.com/data', {
+        headers: {
+          'Authorization': `Bearer ${apiKey}`
+        }
+      });
+      const data = await response.json();
+      // Handle data
+    } catch (error) {
+      // Handle error
+    }
+  };
   // const [viewerCount, setViewerCount] = useState(
   //   typeof window !== 'undefined' ? parseInt(localStorage.getItem('viewerCount')) || 0 : 0
   // );

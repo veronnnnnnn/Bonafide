@@ -33,3 +33,18 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+.env
+
+# AWS metadata
+.aws-sam/
+.aws/
+.awspublish
+
+# Azure metadata
+.env.azure
+.azure
+.vscode/azureExtensions.json
+
+# Google Cloud metadata
+.gcloud/
