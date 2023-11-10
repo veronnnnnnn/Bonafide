@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import React, { useRef, useState, useEffect} from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Marquee from "react-fast-marquee";
 import { Carousel } from "@material-tailwind/react";
@@ -16,27 +16,17 @@ export default function Home() {
 
   const router = useRouter();
 
-  // const [viewerCount, setViewerCount] = useState(
-  //   typeof window !== 'undefined' ? parseInt(localStorage.getItem('viewerCount')) || 0 : 0
-  // );
-  // useEffect(() => {
-  //   if (typeof window !== 'undefined') {
-  //     const updatedViewerCount = viewerCount + 1;
-  //     setViewerCount(updatedViewerCount);
-  //     localStorage.setItem('viewerCount', updatedViewerCount);
-  //   }
-  // }, []);
 
   return (
     <div className="w-full h-full top-0 left-0">
-      <Parallax  pages={5}>
-        {/* Hero Section */}
+      <Parallax pages={5}>
+
         <ParallaxLayer offset={0} speed={0}>
-        <div className="w-full h-full bg-gradient-to-b from-green-50 via-blue-100 to-purple-100"></div>
+          <div className="w-full h-full bg-gradient-to-b from-green-50 via-blue-100 to-purple-100"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0}>
           <div className="w-full h-full flex flex-col items-center mt-16">
-          <h1 className="font-montserrat font-extrabold lg:text-[50] text-[60px] xt-[49x] text-center text-[#5284C0]">
+            <h1 className="font-montserrat font-extrabold lg:text-[50] text-[60px] xt-[49x] text-center text-[#5284C0]">
               Equal Perspectives
             </h1>
             <h3 className="font-montserrat font-normal text-[20px] text-[#4874A8]">
@@ -68,15 +58,15 @@ export default function Home() {
           <div className="w-full h-12 bg-blue"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={0.9} speed={-0.33}>
-        <div
-    className="w-full flex justify-center font-montserrat font-bold text-2xl text-white"
-    style={{
-      textShadow: '6px 6px 6px rgba(0,0,0,0.4)', // Add a shadow effect to the text
-    }}
-  >
-    Scroll down to see more
-  </div>
-  <style jsx>{`
+          <div
+            className="w-full flex justify-center font-montserrat font-bold text-2xl text-white"
+            style={{
+              textShadow: '6px 6px 6px rgba(0,0,0,0.4)',
+            }}
+          >
+            Scroll down to see more
+          </div>
+          <style jsx>{`
   @media (max-width: 768px) {
     .text-2xl {
       font-size: 1rem; // Adjust font size for smaller screens
@@ -87,7 +77,7 @@ export default function Home() {
 
         {/* About the Project */}
         <ParallaxLayer offset={1} speed={0}>
-        <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-blue-50"></div>
+          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-blue-50"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={1} speed={0.8}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[85%]" />
@@ -99,11 +89,11 @@ export default function Home() {
           className="flex justify-center items-center"
         >
           <div className="flex flex-row justify-between">
-          <div className="w-2/5 flex justify-center items-center">
-            <div className="w-full h-full bg-[url('/assets/men.png')] bg-contain bg-no-repeat bg-bottom"></div>
+            <div className="w-2/5 flex justify-center items-center">
+              <div className="w-full h-full bg-[url('/assets/men.png')] bg-contain bg-no-repeat bg-bottom"></div>
             </div>
             <div className="w-3/5 flex flex-col p-24">
-            <h6 className="font-montserrat font-semibold lg:text-[24px] text-[10px] xt-[10px] uppercase text-[#2F8859]">
+              <h6 className="font-montserrat font-semibold lg:text-[24px] text-[10px] xt-[10px] uppercase text-[#2F8859]">
                 About the Project
               </h6>
               <h1 className="font-montserrat font-extrabold lg:text-[24px] text-[10px] xt-[10px] text-[#2F8859] pb-4">
@@ -174,7 +164,7 @@ export default function Home() {
         >
           <div className="flex flex-row justify-between">
             <div className="w-full flex flex-col p-24">
-            <h6 className="font-montserrat font-semibold lg:text-[24px] text-[10px] xt-[10px]uppercase text-[#2E89E4]">
+              <h6 className="font-montserrat font-semibold lg:text-[24px] text-[10px] xt-[10px]uppercase text-[#2E89E4]">
                 Significance of the Project
               </h6>
               <h1 className="font-montserrat font-extrabold lg:text-[24px] text-[10px] xt-[10px] text-[#2E89E4] pb-4">
@@ -200,21 +190,21 @@ export default function Home() {
               </p>
             </div>
             <div className="w-2/5 min-h-fit flex justify-center items-center">
-            <div className="w-full h-full bg-[url('/assets/menhand.png')] bg-contain bg-no-repeat bg-bottom"></div>
+              <div className="w-full h-full bg-[url('/assets/menhand.png')] bg-contain bg-no-repeat bg-bottom"></div>
             </div>
           </div>
         </ParallaxLayer>
-        
+
         <ParallaxLayer offset={1.7} speed={-0.3} sticky={{ start: 1.7, end: 1 }}>
-  <div className="bg-black bg-opacity-10 rounded-full ml-[60%] xl:ml-[70%] w-fit min-h-fit p-16 flex flex-col justify-center items-center">
-    <a
-      className="w-fit flex bg-[#F0CD62] text-white py-3 px-6 lg:py-5 lg:px-8 justify-center rounded-full font-montserrat text-lg lg:text-xl text-[10px] font-semibold cursor-pointer mb-4"
-      href={"https://www.facebook.com/CvSUGADResourceCenter"}
-      target="_blank"
-    >
-      Join Us
-    </a>
-    <p className="font-montserrat text-xl font-semibold text-yellow-950 text-center">
+          <div className="bg-black bg-opacity-10 rounded-full ml-[60%] xl:ml-[70%] w-fit min-h-fit p-16 flex flex-col justify-center items-center">
+            <a
+              className="w-fit flex bg-[#F0CD62] text-white py-3 px-6 lg:py-5 lg:px-8 justify-center rounded-full font-montserrat text-lg lg:text-xl text-[10px] font-semibold cursor-pointer mb-4"
+              href={"https://www.facebook.com/CvSUGADResourceCenter"}
+              target="_blank"
+            >
+              Join Us
+            </a>
+            <p className="font-montserrat text-xl font-semibold text-yellow-950 text-center">
               along with other
             </p>
             <h2 className="font-montserrat text-4xl xl:text-5xl font-bold text-yellow-950 text-center my-2">
@@ -223,8 +213,8 @@ export default function Home() {
             <p className="font-montserrat text-xl font-semibold text-yellow-950 text-center">
               people who joined
             </p>
-  </div>
-  <style jsx>{`
+          </div>
+          <style jsx>{`
   @media (max-width: 768px) {
     .ml-[60%] {
       margin-left: 0%; // Adjust margin for smaller screens
@@ -249,8 +239,8 @@ export default function Home() {
     }
   }
 `}</style>
-  
-</ParallaxLayer>
+
+        </ParallaxLayer>
         <ParallaxLayer offset={2.75} speed={0.5}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[30%] rotate-180" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[40%] " />
@@ -314,7 +304,7 @@ export default function Home() {
             <button
               type="button"
               className="w-fit flex bg-[#2E89E4] text-white py-5 px-8 justify-center rounded-full font-montserrat text-lg font-semibold cursor-pointer mb-4"
-              onClick={() => router.push("/project")}       
+              onClick={() => router.push("/project")}
             >
               View the Project
             </button>
@@ -480,7 +470,7 @@ export default function Home() {
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[5%]" />
         </ParallaxLayer>
         <ParallaxLayer offset={4.3} speed={0}>
-        <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4">
+          <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4">
             Project Creators
           </h1>
         </ParallaxLayer>
@@ -490,7 +480,7 @@ export default function Home() {
           factor={1 / 2}
           className="flex pt-12 justify-center items-center"
         >
-        <div className="w-[150px] xl:w-[300px] h-[200px] xl:h-[300px] flex flex-col justify-center items-center bg-[#97C4AC] rounded-lg p-4">
+          <div className="w-[150px] xl:w-[300px] h-[200px] xl:h-[300px] flex flex-col justify-center items-center bg-[#97C4AC] rounded-lg p-4">
             <div className="w-28 xl:w-40 h-28 xl:h-40 bg-[url('/assets/silva.jpg')] bg-cover bg-center bg-no-repeat rounded-full" />
             <h4 className="font-montserrat font-medium text-xl text-white text-center pt-4">
               Veronica Silva
@@ -552,14 +542,14 @@ export default function Home() {
           factor={1 / 2}
           className="w-full flex flex-row justify-around"
         >
-         <div className="w-[150px] xl:w-[300px] h-[200px] xl:h-[300px] flex flex-col justify-center items-center bg-[#97C4AC] rounded-lg p-4">
+          <div className="w-[150px] xl:w-[300px] h-[200px] xl:h-[300px] flex flex-col justify-center items-center bg-[#97C4AC] rounded-lg p-4">
             <div className="w-28 xl:w-40 h-28 xl:h-40 bg-[url('/assets/vergara.png')] bg-cover bg-center bg-no-repeat rounded-full" />
             <h4 className="font-montserrat font-medium text-xl text-white text-center pt-4">
               Krishna Vergara
             </h4>
           </div>
           <div className="w-[150px] xl:w-[300px] h-[200px] xl:h-[300px] flex flex-col justify-center items-center bg-[#97C4AC] rounded-lg p-4">
-          <div className="w-28 xl:w-40 h-28 xl:h-40 bg-[url('/assets/devera.png')] bg-cover bg-center bg-no-repeat rounded-full" />
+            <div className="w-28 xl:w-40 h-28 xl:h-40 bg-[url('/assets/devera.png')] bg-cover bg-center bg-no-repeat rounded-full" />
             <h4 className="font-montserrat font-medium text-xl text-white text-center pt-4">
               Matt Klarenz De Vera
             </h4>
@@ -626,27 +616,27 @@ export default function Home() {
         {/* Footer */}
         <ParallaxLayer offset={5.1} speed={-0.2}>
           <footer className="flex flex-col pb-6 px-6 lg:px-12">
-          <hr className="bg-[#63A683] h-1 rounded-sm "></hr>
+            <hr className="bg-[#63A683] h-1 rounded-sm "></hr>
             <div className="flex flex-row flex-wrap justify-center lg:justify-between max-lg:gap-2 mt-4">
-            <h4 className="font-montserrat font-semibold text-sm text-[#236643] text-center lg:text-start">
+              <h4 className="font-montserrat font-semibold text-sm text-[#236643] text-center lg:text-start">
                 Copyright 2023 © Bonafide Development Co.
               </h4>
               <div className="flex flex-row gap-2 items-center">
-<div className="social" style={{ cursor: 'pointer' }}>
-          <a href="https://www.facebook.com/CvSUGADResourceCenter" target="_blank" rel="noopener noreferrer">
-            <FaFacebook size={35} className="text-[#236643]" />
-          </a>
-        </div>
-        <div className="social" style={{ cursor: 'pointer' }}>
-          <a href="https://www.youtube.com/channel/UC6p5srphejusQzaulrxmtow" target="_blank" rel="noopener noreferrer">
-            <FaYoutube size={35} className="text-[#236643]" />
-          </a>
-        </div>
-        <div className="social" style={{ cursor: 'pointer' }}>
-          <a href="https://cvsu.edu.ph/gender-and-development-resource-center/" target="_blank" rel="noopener noreferrer">
-            <FaGlobe size={35} className="text-[#236643]" />
-          </a>
-        </div>
+                <div className="social" style={{ cursor: 'pointer' }}>
+                  <a href="https://www.facebook.com/CvSUGADResourceCenter" target="_blank" rel="noopener noreferrer">
+                    <FaFacebook size={35} className="text-[#236643]" />
+                  </a>
+                </div>
+                <div className="social" style={{ cursor: 'pointer' }}>
+                  <a href="https://www.youtube.com/channel/UC6p5srphejusQzaulrxmtow" target="_blank" rel="noopener noreferrer">
+                    <FaYoutube size={35} className="text-[#236643]" />
+                  </a>
+                </div>
+                <div className="social" style={{ cursor: 'pointer' }}>
+                  <a href="https://cvsu.edu.ph/gender-and-development-resource-center/" target="_blank" rel="noopener noreferrer">
+                    <FaGlobe size={35} className="text-[#236643]" />
+                  </a>
+                </div>
 
               </div>
             </div>
