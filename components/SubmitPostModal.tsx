@@ -102,11 +102,11 @@ export function SubmitPostModal({ isOpen, setter, setPosts }: any) {
               label="Message"
               color="indigo"
               className="font-montserrat font-medium"
-              maxLength={150}
+              maxLength={1000}
               onChange={(e) => setMessage(e.target.value)}
             />
             <p>
-        {message.length}/150 characters
+        {message.length}/1000 characters
       </p>
     
           </div>

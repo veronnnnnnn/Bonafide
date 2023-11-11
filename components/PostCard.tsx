@@ -152,7 +152,7 @@ export default function PostCard({
             onChange={(e) => setComment(e.target.value)}
             className="w-full bg-transparent outline-none border placeholder:text-white px-4 border-white/60 font-montserrat font-medium text-sm text-white rounded-full"
             placeholder="Write a comment"
-            maxLength={150}
+            maxLength={1000}
           />
           <button
             type="button"

@@ -10,16 +10,53 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { FaFacebook } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
+// import { BsChevronUp } from "react-icons/bs";
+// import { BsChevronDown } from "react-icons/bs";
 
 
 export default function Home() {
+  const parallax = useRef();
 
   const router = useRouter();
 
+  // const [currentPage, setCurrentPage] = useState(0); // Assuming the initial page is 1
+
+  // const handleIncrement = () => {
+  //   if (currentPage < 6) {
+  //     setCurrentPage((prevPage) => prevPage + 1);
+  //     parallax.current.scrollTo(currentPage + 1); // Adjust this line based on how you need to handle the scrolling
+  //   }
+  // };
+
+  // const handleDecrement = () => {
+  //   if (currentPage > 0) {
+  //     setCurrentPage((prevPage) => prevPage - 1);
+  //     parallax.current.scrollTo(currentPage - 1); // Adjust this line based on how you need to handle the scrolling
+  //   }
+  // };
 
   return (
     <div className="w-full h-full top-0 left-0">
-      <Parallax pages={5}>
+      <Parallax pages={5} ref={parallax}>
+      {/* <ParallaxLayer
+          offset={0.89}
+          speed={-1}
+          style={{ position: "absolute", zIndex: "1000", marginLeft: "95%", cursor: "pointer"}}
+          onClick={handleDecrement}
+        >
+          <BsChevronUp  size={50} className="text-black rounded-full bg-white p-4"/>
+          
+       </ParallaxLayer>
+       <ParallaxLayer
+          offset={0.89}
+          speed={-1}
+          style={{ position: "absolute", zIndex: "1000", marginLeft: "90%", cursor: "pointer"}}
+          onClick={handleIncrement}
+          
+        >
+          <BsChevronDown  size={50} className="text-black rounded-full bg-white p-4"/>
+          
+       </ParallaxLayer>  */}
 
         <ParallaxLayer offset={0} speed={0}>
           <div className="w-full h-full bg-gradient-to-b from-green-50 via-blue-100 to-purple-100"></div>
