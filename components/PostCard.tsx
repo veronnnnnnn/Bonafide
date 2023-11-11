@@ -43,7 +43,7 @@ export default function PostCard({
   const [seeMore, setSeeMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const randomColor = colors[index % colors.length];
-  const isLongMessage = message.length >= 100;
+  const isLongMessage = message.length >= 50;
 
   const [comment, setComment] = useState<string>("");
 

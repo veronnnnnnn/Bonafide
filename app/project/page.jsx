@@ -66,14 +66,14 @@ export default function Project() {
        <ParallaxLayer
           offset={0.89}
           speed={-1}
-          style={{ position: "absolute", zIndex: "100", marginLeft: "92%", cursor: "pointer"}}
+          style={{ position: "absolute", zIndex: "100", marginLeft: "90%", cursor: "pointer"}}
           onClick={handleIncrement}
           
         >
           <BsChevronDown  size={50} className="text-black rounded-full bg-white p-4"/>
           
        </ParallaxLayer> 
-      <ParallaxLayer
+      {/* <ParallaxLayer
           offset={0.89}
           speed={-1}
           factor={6}
@@ -81,7 +81,7 @@ export default function Project() {
           onClick={() => parallax.current.scrollTo(0)}
         >
           <BsChevronUp  size={50} className="text-black rounded-full bg-white p-4"/>
-        </ParallaxLayer>
+        </ParallaxLayer> */}
         <ParallaxLayer
           offset={0}
           speed={0}
@@ -122,15 +122,15 @@ export default function Project() {
         {/* 5th section */}
         <ParallaxLayer
           offset={4}
-          speed={0}
-          factor={1/2}
+          speed={-0.1}
+          
           
           style={{
             padding: "96px",
             textAlign: "center",
           }}
         >
-          <h1 className="font-montserrat font-extrabold text-3xl text-white pt-4" style={{ marginTop: '650px' }}>
+          <h1 className="font-montserrat font-extrabold text-3xl text-white pt-4" style={{ marginTop: '580px' }}>
     We can promote healthy coping mechanisms toward fostering a supportive environment.
 </h1>
 
