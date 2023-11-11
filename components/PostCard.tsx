@@ -43,6 +43,7 @@ export default function PostCard({
   const [seeMore, setSeeMore] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const randomColor = colors[index % colors.length];
+  const isLongMessage = message.length >= 100;
 
   const [comment, setComment] = useState<string>("");
 
@@ -90,7 +91,10 @@ export default function PostCard({
         <h4 className="font-montserrat font-semibold text-base text-black">
           {subject}
         </h4>
-        <p className="h-[80px] font-montserrat font-medium text-sm text-black">
+        <p  className={`font-montserrat font-medium text-sm text-black ${
+            isLongMessage ? 'overflow-auto max-h-40' : '' // Adjust max height as needed
+          }`}
+        >
           {message}
         </p>
       </div>
@@ -114,13 +118,16 @@ export default function PostCard({
               ))
             ) : (
               <div>
-                <h5 className="font-montserrat font-semibold text-sm text-black">
+              <h5 className="font-montserrat font-semibold text-sm text-black">
                   Anonymous User
                 </h5>
                 <h6 className="font-montserrat font-medium text-xs text-black/60 mb-2">
                   {comments[comments.length - 1].comment_timestamp}
                 </h6>
-                <p className="font-montserrat font-medium text-sm text-black">
+                <p className={`font-montserrat font-medium text-sm text-black ${
+            isLongMessage ? 'overflow-auto max-h-40' : '' // Adjust max height as needed
+          }`}
+        >
                   {comments[comments.length - 1].comment_message}
                 </p>
               </div>

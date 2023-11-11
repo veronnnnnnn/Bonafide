@@ -106,3 +106,6 @@
 .modal-buttons button:hover {
   background-color: #45a049;
 }
+
+/* Add this to your global CSS or PostCard.module.css file */
+

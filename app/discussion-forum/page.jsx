@@ -22,6 +22,13 @@ export default function DiscussionForum() {
   const [currentPage, setCurrentPage] = useState(0);
   const [paginatedPosts, setPaginatedPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
+  useEffect(() => {
+    const privacyAccepted = localStorage.getItem("privacyAccepted");
+    if (privacyAccepted) {
+      setShowPrivacyPrompt(false);
+    }
+  }, []);
+  
 
   useEffect(() => {
     if (posts.length == 0) {
@@ -69,6 +76,7 @@ export default function DiscussionForum() {
     }, 2000);
   };
   const handleAcceptPrivacy = () => {
+    localStorage.setItem("privacyAccepted", "true");
      setShowPrivacyPrompt(false);
     };
   return (
@@ -108,8 +116,8 @@ export default function DiscussionForum() {
       )}
       {!showPrivacyPrompt && (
         <div>
-    <Parallax pages={2.5}>
-      <ParallaxLayer offset={0} speed={0} factor={2.5}>
+    <Parallax pages={4}>
+      <ParallaxLayer offset={0} speed={0} factor={4}>
         <div className="w-full h-full bg-gradient-to-b from-white via-yellow-50 to-yellow-50"></div>
       </ParallaxLayer>
       <ParallaxLayer offset={0.1} speed={-0.6}>
@@ -144,6 +152,14 @@ export default function DiscussionForum() {
         <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[14%] -rotate-90" />
         <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[78%]" />
       </ParallaxLayer>
+      <ParallaxLayer offset={1.5} speed={-0.6}>
+        <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[14%] -rotate-90" />
+        <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[78%]" />
+      </ParallaxLayer>
+      <ParallaxLayer offset={2} speed={-0.6}>
+        <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[14%] -rotate-90" />
+        <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[78%]" />
+      </ParallaxLayer>
       <ParallaxLayer offset={0} speed={0} factor={1 / 2}>
         <div className="flex flex-row gap-4 px-24 py-16">
           <BsArrowLeft
@@ -174,7 +190,7 @@ export default function DiscussionForum() {
     <div className="flex flex-col items-center gap-4 px-8 md:px-24 py-4 md:py-6 md:mt-6">
         <button
               type="button"
-              className="w-fit flex bg-[#7163DE] text-white py-4 px-8 justify-center rounded-full font-montserrat text-base font-semibold cursor-pointer mb-4"
+              className="w-fit flex bg-[#7163DE] text-white py-4 px-8 justify-center rounded-full font-montserrat text-base font-semibold cursor-pointer mb-4 mt-20"
               onClick={() => setShowPostModal(true)}
             >
               Submit a Post
@@ -211,7 +227,7 @@ export default function DiscussionForum() {
               breakLabel={"..."}
               pageCount={pageCount}
               marginPagesDisplayed={2}
-              pageRangeDisplayed={5}
+              pageRangeDisplayed={8}
               onPageChange={handlePageChange}
               containerClassName={"pagination"}
               activeClassName={"active"}
