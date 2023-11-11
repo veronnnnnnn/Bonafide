@@ -130,7 +130,7 @@ export default function Project() {
             textAlign: "center",
           }}
         >
-          <h1 className="font-montserrat font-extrabold text-3xl text-white pt-4" style={{ marginTop: '580px' }}>
+          <h1 className="font-montserrat font-extrabold text-3xl text-white pt-4" style={{ marginTop: '500px' }}>
     We can promote healthy coping mechanisms toward fostering a supportive environment.
 </h1>
 
@@ -247,7 +247,7 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     className="font-montserrat font-extrabold text-3xl text-white pb-4"
     style={{
       textAlign: 'center',
-      marginTop: '400px',
+      marginTop: '300px',
       textShadow: '2px 2px 4px rgba(0,0,0,0.4)', // Add a shadow effect to the text
     }}
   >

@@ -111,7 +111,9 @@ export default function PostCard({
                   <h6 className="font-montserrat font-medium text-xs text-black/60 mb-2">
                     {comment.comment_timestamp}
                   </h6>
-                  <p className="font-montserrat font-medium text-sm text-black">
+                  <p className={`font-montserrat font-medium text-sm text-black ${
+            isLongMessage ? 'overflow-auto max-h-40' : '' // Adjust max height as needed
+          }`}>
                     {comment.comment_message}
                   </p>
                 </div>
