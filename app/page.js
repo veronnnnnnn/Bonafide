@@ -547,12 +547,12 @@ export default function Home() {
             <button
               type="button"
               className="w-fit flex bg-[#FF0A59] text-white py-8 px-20 justify-center rounded-full font-montserrat text-xl font-semibold cursor-pointer mb-4"
-              onClick={handleRegisterClick}
+             // onClick={handleRegisterClick}
               >
               Register Now
             </button>
-            
-            {showModal && (
+{/*             
+           {showModal && (
         <div className="modal-overlay">
           <div className="modal">
             <button className="close-modal" onClick={handleCloseModal}>
@@ -560,7 +560,7 @@ export default function Home() {
             </button>
           </div>
         </div>
-      )}
+      )} */}
     </div>
 </ParallaxLayer>
         
