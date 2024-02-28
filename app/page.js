@@ -10,7 +10,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { FaFacebook } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
-import RegistrationForm from "./RegistrationForm";
 
 // import { BsChevronUp } from "react-icons/bs";
 // import { BsChevronDown } from "react-icons/bs";
@@ -20,20 +19,7 @@ export default function Home() {
   const parallax = useRef();
 
   const router = useRouter();
-  const [showModal, setShowModal] = useState(false);
 
-  const handleRegisterClick = () => {
-    setShowModal(true);
-  };
-
-  const handleCloseModal = () => {
-    setShowModal(false);
-  };
-  const handleFormSubmit = () => {
-    // Close the modal or perform other actions
-    // For example, set state to hide the modal
-    setShowModal(false);
-  };
   
   // const [currentPage, setCurrentPage] = useState(0); // Assuming the initial page is 1
 
@@ -153,7 +139,7 @@ export default function Home() {
                 Mental Health and Gender Equality
               </h1>
               <p className="font-montserrat font-normal lg:text-[24px] text-[10px] xt-[10px] text-black">
-              Men's gender equality seeks to create a more inclusive and equitable environment where 
+              Men&apos;s gender equality seeks to create a more inclusive and equitable environment where 
               people are free to express themselves and pursue their aspirations without encountering 
               discrimination based on their gender. It acknowledges that men, like women, can be impacted 
               by rigid gender roles and stereotypes. It is a part of the larger movement for gender equality, 
@@ -221,18 +207,18 @@ export default function Home() {
               <p className="font-montserrat font-normal lg:text-[24px] text-[10px] xt-[10px] text-black">
                 Better understanding of the people to have an awareness of the
                 said topic and as well as can be used for advocacy on human
-                rights specifically on the importance of men&apos; gender
+                rights specifically on the importance of men&apos;s gender
                 equality.<br></br>
                 <br></br> Improved perspective of what is the emotional
-                flexibility on men&apos; gender role and equality and broaden
-                knowledge about the topic&apos; result. <br></br>
+                flexibility on men&apos;s gender role and equality and broaden
+                knowledge about the topic&apos;s result. <br></br>
                 <br></br> An insight of a tackled topic for advocates,
                 educators, and learners. Creating a parallax website about
-                “Promoting Men&apos; Emotional Flexibility” is another way to
+                “Promoting Men&apos;s Emotional Flexibility” is another way to
                 resolve the issue involving the breaking down of the
-                society&apos; expectation about men suppressing their emotions
+                society&apos;s expectation about men suppressing their emotions
                 to encourage men to be more openly expressive. Our parallax
-                website&apos; goal is to educate users or readers on the
+                website&apos;s goal is to educate users or readers on the
                 significance of emotional intelligence and to give resources and
                 tools to assist men in developing these skills.
               </p>
@@ -269,7 +255,7 @@ export default function Home() {
               
               <p className="font-montserrat font-normal lg:text-[24px] text-[10px] xt-[10px] text-black">
               In collaboration with Move Katropa, an organization dedicated to advocating for gender equality in men, 
-              our team comprises IT students from National University. We focus on promoting men's mental health 
+              our team comprises IT students from National University. We focus on promoting men&apos;s mental health 
               and gender equality by addressing emotional and lifestyle aspects through the Parallax Website. 
               Through our research, we aim to raise awareness and foster social equality for men, creating a more 
               friendly and just society while eliminating social stigma and stereotyping against men. Our study 
@@ -572,7 +558,6 @@ export default function Home() {
             <button className="close-modal" onClick={handleCloseModal}>
               &times;
             </button>
-            <RegistrationForm  onSubmitSuccess={handleFormSubmit} />
           </div>
         </div>
       )}
