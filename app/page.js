@@ -10,6 +10,8 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import { FaFacebook } from 'react-icons/fa';
 import { FaYoutube } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
+import RegistrationForm from "./RegistrationForm";
+
 // import { BsChevronUp } from "react-icons/bs";
 // import { BsChevronDown } from "react-icons/bs";
 
@@ -18,7 +20,21 @@ export default function Home() {
   const parallax = useRef();
 
   const router = useRouter();
+  const [showModal, setShowModal] = useState(false);
 
+  const handleRegisterClick = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
+  };
+  const handleFormSubmit = () => {
+    // Close the modal or perform other actions
+    // For example, set state to hide the modal
+    setShowModal(false);
+  };
+  
   // const [currentPage, setCurrentPage] = useState(0); // Assuming the initial page is 1
 
   // const handleIncrement = () => {
@@ -37,7 +53,7 @@ export default function Home() {
 
   return (
     <div className="w-full h-full top-0 left-0">
-      <Parallax pages={5} ref={parallax}>
+      <Parallax pages={7} ref={parallax}>
       {/* <ParallaxLayer
           offset={0.89}
           speed={-1}
@@ -137,16 +153,12 @@ export default function Home() {
                 Mental Health and Gender Equality
               </h1>
               <p className="font-montserrat font-normal lg:text-[24px] text-[10px] xt-[10px] text-black">
-                We are composed of National University IT students promoting the
-                men&apos;s mental health and gender equality in terms of
-                emotional and lifestyle through Parallax Website. The
-                researchers came up with the study to be able to recognize
-                promoting social equality for men creating a more friendly,
-                equitable society and eradicate social stigma and stereotyping
-                against men. Variables that lead to inequality must be
-                identified and addressed. This includes facing the damaging
-                preconceptions and expectations about what it means to be a man,
-                as well as tackling structural prejudices in society.
+              Men's gender equality seeks to create a more inclusive and equitable environment where 
+              people are free to express themselves and pursue their aspirations without encountering 
+              discrimination based on their gender. It acknowledges that men, like women, can be impacted 
+              by rigid gender roles and stereotypes. It is a part of the larger movement for gender equality, 
+              which seeks to address and correct discrimination and inequality that men might experience.
+          
               </p>
             </div>
           </div>
@@ -185,8 +197,7 @@ export default function Home() {
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[10%] -rotate-45" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%]" />
         </ParallaxLayer>
-
-        {/* Significance of the Project */}
+        
         <ParallaxLayer offset={2} speed={0}>
           <div className="w-full h-full bg-gradient-to-b from-blue-50 via-blue-100 to-purple-50"></div>
         </ParallaxLayer>
@@ -229,6 +240,44 @@ export default function Home() {
             <div className="w-2/5 min-h-fit flex justify-center items-center">
               <div className="w-full h-full bg-[url('/assets/menhand.png')] bg-contain bg-no-repeat bg-bottom"></div>
             </div>
+          </div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={2.75} speed={0.5}>
+          <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%] rotate-180" />
+          <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[40%]" />
+        </ParallaxLayer>
+        <ParallaxLayer offset={2} speed={0.2}>
+          <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[10%] -rotate-45" />
+          <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%]" />
+        </ParallaxLayer>
+
+        {/* Significance of the Project */}
+        <ParallaxLayer offset={3} speed={0}>
+          <div className="w-full h-full bg-gradient-to-b from-purple-50 via-blue-100 to-purple-50"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={3} speed={0.8}>
+          <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[45%]" />
+          <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[40%] -rotate-45" />
+        </ParallaxLayer>
+        <ParallaxLayer
+          offset={3}
+          speed={0.45}
+          className="flex flex-row justify-center items-center"
+        >
+          <div className="flex flex-row justify-between">
+            <div className="w-full flex flex-col p-24 text-center">
+              
+              <p className="font-montserrat font-normal lg:text-[24px] text-[10px] xt-[10px] text-black">
+              In collaboration with Move Katropa, an organization dedicated to advocating for gender equality in men, 
+              our team comprises IT students from National University. We focus on promoting men's mental health 
+              and gender equality by addressing emotional and lifestyle aspects through the Parallax Website. 
+              Through our research, we aim to raise awareness and foster social equality for men, creating a more 
+              friendly and just society while eliminating social stigma and stereotyping against men. Our study 
+              emphasizes the identification and resolution of variables contributing to inequality. This involves 
+              confronting damaging preconceptions and expectations surrounding masculinity and addressing structural prejudices within society
+              </p>
+            </div>
+            
           </div>
         </ParallaxLayer>
 
@@ -278,24 +327,24 @@ export default function Home() {
 `}</style>
 
         </ParallaxLayer>
-        <ParallaxLayer offset={2.75} speed={0.5}>
+        <ParallaxLayer offset={3.75} speed={0.5}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[30%] rotate-180" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[40%] " />
         </ParallaxLayer>
-        <ParallaxLayer offset={2} speed={0.2}>
+        <ParallaxLayer offset={3} speed={0.2}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[10%] -rotate-90" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%]" />
         </ParallaxLayer>
 
         {/* Banner & Submit Post Button*/}
-        <ParallaxLayer offset={3} speed={0}>
-          <div className="w-full h-full bg-gradient-to-b from-purple-50 via-purple-100 to-green-50"></div>
+        <ParallaxLayer offset={4} speed={0}>
+          <div className="w-full h-full bg-gradient-to-b from-purple-50 via-purple-50 to-green-50"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={3.7} speed={0.8}>
+        <ParallaxLayer offset={4.7} speed={0.8}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[45%] -rotate-3" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[40%] rotate-180" />
         </ParallaxLayer>
-        <ParallaxLayer offset={3} speed={0.45} className="z-40">
+        <ParallaxLayer offset={4} speed={0.45} className="z-40">
           <Carousel loop="true" autoplay="true" className="h-[70vh]">
             <div className="w-full h-full bg-[url('/assets/4.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
             <div className="w-full h-full bg-[url('/assets/1.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
@@ -309,7 +358,7 @@ export default function Home() {
   }
 `}</style>
         </ParallaxLayer>
-        <ParallaxLayer offset={3.85} speed={0.5} className="z-40">
+        <ParallaxLayer offset={4.85} speed={0.5} className="z-40">
           <div className="flex justify-center items-center">
             <button
               type="button"
@@ -336,16 +385,17 @@ export default function Home() {
 `}</style>
         </ParallaxLayer>
 
-        <ParallaxLayer offset={2.8} speed={-0}>
-          <div className="bg-black bg-opacity-10 rounded-full ml-[5%] w-fit max-h-fit p-16 flex flex-col justify-center items-center">
-            <button
-              type="button"
-              className="w-fit flex bg-[#2E89E4] text-white py-5 px-8 justify-center rounded-full font-montserrat text-lg font-semibold cursor-pointer mb-4"
-              onClick={() => router.push("/project")}
-            >
-              View the Project
-            </button>
-          </div>
+        <ParallaxLayer offset={3.8} speed={0.5}>
+  <div className="flex justify-center items-center">
+    <div className="flex-col justify-center items-center">
+      <button
+        type="button"
+        className="w-fit flex bg-[#7163DE] text-white py-5 px-8 justify-center rounded-full font-montserrat text-lg font-semibold cursor-pointer mb-4"
+        onClick={() => router.push("/project")}
+      >
+        View the Project
+      </button>
+    </div></div>
           <style jsx>{`
   @media (max-width: 768px) {
     .w-fit {
@@ -371,18 +421,18 @@ export default function Home() {
         </ParallaxLayer>
 
         {/* Partners */}
-        <ParallaxLayer offset={4} speed={0}>
-          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-200"></div>
+        <ParallaxLayer offset={5} speed={0}>
+          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-50"></div>
         </ParallaxLayer>
-        <ParallaxLayer offset={3.1} speed={-0}>
+        <ParallaxLayer offset={4.1} speed={-0}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 ml-[60%] rotate-45" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 ml-[90%] " />
         </ParallaxLayer>
-        <ParallaxLayer offset={3.8} speed={0.45}>
+        <ParallaxLayer offset={4.8} speed={0.45}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 ml-[90%] " />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 ml-[30%] rotate-6" />
         </ParallaxLayer>
-        <ParallaxLayer offset={3.9} speed={0} sticky={{ start: 3.9, end: 1 }}>
+        <ParallaxLayer offset={4.9} speed={0} sticky={{ start: 4.9, end: 1 }}>
           <div className="bg-black bg-opacity-10 rounded-lg py-4 flex flex-col justify-center items-center">
             <h1 className="font-montserrat font-extrabold text-center text-3xl text-black pb-4">
               Partners
@@ -497,22 +547,56 @@ export default function Home() {
           </div>
         </ParallaxLayer>
 
+        <ParallaxLayer offset={6} speed={0}>
+          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-200"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={5.2} speed={0.8}>
+        <div
+    className="w-full h-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat"
+    
+  />
+        </ParallaxLayer>
+        <ParallaxLayer offset={5.9} speed={0.5} className="z-40">
+          <div className="flex justify-center items-center">
+            <button
+              type="button"
+              className="w-fit flex bg-[#FF0A59] text-white py-8 px-20 justify-center rounded-full font-montserrat text-xl font-semibold cursor-pointer mb-4"
+              onClick={handleRegisterClick}
+              >
+              Register Now
+            </button>
+            
+            {showModal && (
+        <div className="modal-overlay">
+          <div className="modal">
+            <button className="close-modal" onClick={handleCloseModal}>
+              &times;
+            </button>
+            <RegistrationForm  onSubmitSuccess={handleFormSubmit} />
+          </div>
+        </div>
+      )}
+    </div>
+</ParallaxLayer>
+        
+        
+
         {/* Project Creators */}
-        <ParallaxLayer offset={4.4} speed={0.8}>
+        <ParallaxLayer offset={6.4} speed={0.8}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[85%] rotate-90" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[80%] rotate-180" />
         </ParallaxLayer>
-        <ParallaxLayer offset={4.2} speed={0.8}>
+        <ParallaxLayer offset={6.2} speed={0.8}>
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[14%] -rotate-90" />
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[5%]" />
         </ParallaxLayer>
-        <ParallaxLayer offset={4.3} speed={0}>
+        <ParallaxLayer offset={6.3} speed={0}>
           <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4">
             Project Creators
           </h1>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4.3}
+          offset={6.3}
           speed={-0.1}
           factor={1 / 2}
           className="flex pt-12 justify-center items-center"
@@ -574,7 +658,7 @@ export default function Home() {
 `}</style>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={4.3}
+          offset={6.3}
           speed={0.2}
           factor={1 / 2}
           className="w-full flex flex-row justify-around"
@@ -641,17 +725,17 @@ export default function Home() {
   }
 `}</style>
         </ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0.5}>
+        <ParallaxLayer offset={6} speed={0.5}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[60%] rotate-180" />
           <div className="w-[5%] h-[10%] ml-[40%] " />
         </ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0.2}>
+        <ParallaxLayer offset={6} speed={0.2}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[10%] " />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%] rotate-45" />
         </ParallaxLayer>
 
         {/* Footer */}
-        <ParallaxLayer offset={5.1} speed={-0.2}>
+        <ParallaxLayer offset={7.1} speed={-0.2}>
           <footer className="flex flex-col pb-6 px-6 lg:px-12">
             <hr className="bg-[#63A683] h-1 rounded-sm "></hr>
             <div className="flex flex-row flex-wrap justify-center lg:justify-between max-lg:gap-2 mt-4">
