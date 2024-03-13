@@ -16,7 +16,7 @@ export default function Project() {
   const [currentPage, setCurrentPage] = useState(0); // Assuming the initial page is 1
 
   const handleIncrement = () => {
-    if (currentPage < 7) {
+    if (currentPage < 13) {
       setCurrentPage((prevPage) => prevPage + 1);
       parallax.current.scrollTo(currentPage + 1); // Adjust this line based on how you need to handle the scrolling
     }
@@ -34,7 +34,7 @@ export default function Project() {
       
       
       {/* 1st section */}
-      <Parallax ref={parallax} pages={8}>
+      <Parallax ref={parallax} pages={13}>
       <ParallaxLayer
     offset={0}
     speed={-1}
@@ -85,7 +85,7 @@ export default function Project() {
         <ParallaxLayer
           offset={0}
           speed={0}
-          factor={8}
+          factor={13}
           style={{
             backgroundImage:
               "url(/assets/star.png), linear-gradient(#2b1055, #7597de)",
@@ -121,7 +121,7 @@ export default function Project() {
 />
         {/* 5th section */}
         <ParallaxLayer
-          offset={4}
+          offset={7.2}
           speed={-0.1}
           
           
@@ -136,7 +136,7 @@ export default function Project() {
 
           </ParallaxLayer>
           <ParallaxLayer
-          offset={6}
+          offset={11}
           speed={0.1}
           factor={1}
           style={{
@@ -150,7 +150,7 @@ export default function Project() {
         
         </ParallaxLayer>
         <ParallaxLayer
-          offset={6}
+          offset={11}
           speed={0.1}
           style={{ backgroundImage: "url(/assets/hn3.png)", backgroundSize: "50%",
           backgroundPosition: "left", marginTop: "50px"}}
@@ -158,19 +158,20 @@ export default function Project() {
         />
         
 <ParallaxLayer
-  offset={6}
+  offset={11}
   speed={-0.1}
   style={{ backgroundImage: "url(/assets/hn1.png)", backgroundSize:"50%",
   backgroundPosition: "right", }}/>
 
         <ParallaxLayer
-          offset={5}
+          offset={9}
           speed={0}
           style={{backgroundColor: "#7597de"}}
         />
         <ParallaxLayer
-          offset={5}
+          offset={9}
           speed={-0.1}
+          className="z-40"
           style={{
             padding: "96px",
             display: "flex",
@@ -182,12 +183,14 @@ export default function Project() {
            <h1 className="font-montserrat font-extrabold text-3xl text-white pb-4 text-center">
           By amplifying the voices of male advocates for gender equality, we can create a more inclusive dialogue that addresses the unique challenges faced by men.          </h1>
           <Carousel loop={true} autoplay={true} className="">
+          <div className="w-full h-full bg-[url('/assets/c1.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
+          <div className="w-full h-full bg-[url('/assets/c2.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
             <div className="w-full h-full bg-[url('/assets/a1.png')] bg-contain bg-no-repeat bg-bottom"></div>
             <div className="w-full h-full bg-[url('/assets/a2.png')] bg-contain bg-no-repeat bg-bottom"></div>
             <div className="w-full h-full bg-[url('/assets/a3.png')] bg-contain bg-no-repeat bg-bottom"></div>
           </Carousel>
         </ParallaxLayer>
-        <ParallaxLayer offset={4} speed={0.8} 
+        <ParallaxLayer offset={7} speed={0.8} 
 style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
   <div className="w-[100%] h-[100%] bg-[url('/assets/umb1.png')] bg-no-repeat bg-center" />
 </ParallaxLayer>
@@ -195,7 +198,7 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         {/* 4th section */}
         
 <ParallaxLayer
-  offset={4}
+  offset={7}
   speed={-0.2}
   
   style={{
@@ -213,9 +216,9 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
   </h1>
 
 </ParallaxLayer>
-<ParallaxLayer offset={3} speed={0} />
+<ParallaxLayer offset={8} speed={0} />
 <ParallaxLayer
-  offset={3.1}
+  offset={8.1}
   speed={-0.1}
   style={{
     padding: '96px',
@@ -256,11 +259,11 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
         {/* 3rd section */}
         <ParallaxLayer
-          offset={2}
+          offset={6}
           speed={0}
         />
         <ParallaxLayer
-          offset={2}
+          offset={6}
           speed={-0.1}
           style={{
             padding: "96px",
@@ -274,15 +277,15 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
         
   
   </ParallaxLayer>
-  <ParallaxLayer offset={2} speed={0.8}>
+  <ParallaxLayer offset={6} speed={0.8}>
           <div className="w-[80%] h-[80%] bg-[url('/assets/text.png')] bg-contain bg-no-repeat bg-center opacity-100 ml-[10%]" />
         </ParallaxLayer>
         <ParallaxLayer
-          offset={1}
+          offset={6}
           speed={0}
         />
         <ParallaxLayer
-          offset={1}
+          offset={5}
           speed={-0.09}
           style={{
             padding: "96px",
@@ -304,11 +307,11 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               // Adjust the style according to your requirements
 />
         </ParallaxLayer>
-        <ParallaxLayer offset={1.8} speed={0.8}>
+        <ParallaxLayer offset={5} speed={0.8}>
           <div className="w-[20%] h-[20%] bg-[url('/assets/sad.png')] bg-contain bg-no-repeat opacity-10 block ml-[70%] " />
           <div className="w-[20%] h-[20%] bg-[url('/assets/sad.png')] bg-contain bg-no-repeat opacity-20 block ml-[50%] " />
         </ParallaxLayer>
-        <ParallaxLayer offset={1.5} speed={0.8}>
+        <ParallaxLayer offset={5} speed={0.8}>
           <div className="w-[20%] h-[20%] bg-[url('/assets/sad.png')] bg-contain bg-no-repeat opacity-10 block ml-[20%]" />
           <div className="w-[20%] h-[20%] bg-[url('/assets/sad.png')] bg-contain bg-no-repeat opacity-20 block ml-[10%]" />
         </ParallaxLayer>
@@ -361,9 +364,216 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             and refusal to have sex
           </p>
         </ParallaxLayer>
+
+        
+        <ParallaxLayer
+  offset={1} // Adjust the offset as needed
+  speed={0.5} // Adjust the speed as needed
+  style={{
+    padding: "5%", // Adjust the padding as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column", // Set the flex direction to column
+    backgroundColor: "#2b1055",
+  }}
+>
+  <h1 className="font-montserrat font-extrabold text-2xl md:text-3xl lg:text-4xl text-white pb-2 md:pb-4">
+  61 New Move Advocates Join the Movement for Gender and Development!   </h1>
+  <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+  In a momentous stride towards gender equality, the Commission on Filipinos Overseas and Gad Cvsu 
+  (Gender and Development- Resource Center) have welcomed 61 passionate advocates to the cause. 
+  This incredible opportunity marks a significant achievement in the GAD (Gender and Development) journey.  </p>
+
+  <div style={{ display: 'flex',justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}>
+    <Image
+      src="/assets/event2.jpg"
+      alt="Image 1"
+      style={{ width: '37%',marginRight: '8px', height: 'auto'}} // Adjust the marginRight and width as needed
+    />
+    <Image
+      src="/assets/event1.jpg"
+      alt="Image 2"
+      style={{ width: '40%', marginLeft: '8px', height: 'auto' }} // Adjust the marginLeft and width as needed
+    />
+  </div>
+
+</ParallaxLayer>
+
+<ParallaxLayer
+  offset={2} // Adjust the offset as needed
+  speed={0.5} // Adjust the speed as needed
+  className="z-40"
+  style={{
+    padding: "5%", // Adjust the padding as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column", // Set the flex direction to column
+    backgroundColor: "#4A133F",
+  }}
+>
+  <h1 className="font-montserrat font-extrabold text-2xl md:text-3xl lg:text-4xl text-white pb-2 md:pb-4">
+  LGU Bagong Trece Launches MOVE KATROPA Advocacy!    </h1>
+  <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+  In a groundbreaking move towards gender inclusivity, LGU Bagong Trece (Trece Martires City) 
+  has officially established MOVE KATROPA, a transformative initiative aimed at fostering Gender and Development (GAD) 
+  integration across all municipal services and programs.
+  Witness the recently elected officers and Technical Working Group (TWG)
+   of MOVE KATROPA, led by the dynamic Vice Mayor Bobby Montehermoso. 
+   We also extend our warm congratulations to the industrious Mayor Gemma Buendia Lubigan. </p>
+
+   <Carousel loop={true} autoplay={true} className="" style={{ marginTop: '50px' }}>
+            <div className="w-full h-full bg-[url('/assets/e1.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
+            <div className="w-full h-full bg-[url('/assets/e2.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
+            <div className="w-full h-full bg-[url('/assets/e3.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
+            <div className="w-full h-full bg-[url('/assets/e4.jpg')] bg-contain bg-no-repeat bg-bottom"></div>
+
+          </Carousel>
+
+</ParallaxLayer>
+
+<ParallaxLayer
+  offset={3} // Adjust the offset as needed
+  speed={0.5} // Adjust the speed as needed
+  style={{
+    padding: "5%", // Adjust the padding as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column", // Set the flex direction to column
+    backgroundColor: "#8D3A73",
+  }}
+>
+  <h1 className="font-montserrat font-extrabold text-2xl md:text-3xl lg:text-4xl text-white pb-2 md:pb-4">
+  Exciting News from Diverse Government Agencies    </h1>
+  <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+  Yesterday&apos;s validation team for MOVE Training Modules welcomed a dedicated participant into their esteemed ranks. 
+  Mr. King David Agreda immersed in the company of conscientious men, stands poised to champion the cause of establishing a 
+  violence-free community for all. Heartfelt gratitude extends to the Philippine Commission on Women for providing 
+  this invaluable opportunity to engage with MOVE Philippine representatives.
+  Appreciation is also extended to Cavite State University and GAD-RC for their unwavering support in advancing the causes of GAD 
+  (Gender and Development) and GEDSI (Gender Equality and Social Inclusion). Their steadfast commitment is a testament to the shared advocacy for positive change.</p>
+
+  <div style={{ display: 'flex',justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}>
+    <Image
+      src="/assets/e5.jpg"
+      alt="Image 1"
+      style={{ width: '40%',marginRight: '8px', height: 'auto'}} // Adjust the marginRight and width as needed
+    />
+    <Image
+      src="/assets/e6.jpg"
+      alt="Image 2"
+      style={{ width: '40%', marginLeft: '8px', height: 'auto' }} // Adjust the marginLeft and width as needed
+    />
+  </div>
+
+</ParallaxLayer>
+
+<ParallaxLayer
+  offset={4} // Adjust the offset as needed
+  speed={0.5} // Adjust the speed as needed
+  className="z-40"
+  style={{
+    padding: "5%", // Adjust the padding as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column", // Set the flex direction to column
+    backgroundColor: "#2b1055",
+  }}
+>    <Carousel loop={true} autoplay={true} className="" style={{ marginTop: '50px' }}>
+    <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        {/* Content for the first slide */}
+        <div>
+          <h1 className="font-montserrat font-extrabold text-2xl md:text-3xl lg:text-4xl text-white pb-2 md:pb-4">
+            The Tourism Infrastructure and Enterprise Zone Authority of the Philippines (TIEZA) extends gratitude to the distinguished Resource Speaker for their pivotal role in the Gender Sensitivity Orientation for Men and the MOVE & KATROPA Advocacy Orientation.
+          </h1>
+          <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-left">
+            A hearty congratulations resonates with the newly inducted MOVE & KATROPA members, marking a significant step towards their commitment to the causes of GAD, MOVE, KATROPA, and Advocacy. Anticipate an upcoming collaboration as TIEZA looks forward to fostering a partnership with CvSU. Stay tuned for more exciting developments!
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Images for the first slide */}
+          <Image
+            src="/assets/e7.jpg"
+            alt="Image 1"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/e8.jpg"
+            alt="Image 2"
+            width={300} // Adjust the width as needed
+            height={200} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/e9.jpg"
+            alt="Image 3"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/e10.jpg"
+            alt="Image 4"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+        </div>
+</div></div>    
+    
+
+    {/* Additional Carousel items can be added here */}
+     <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+          {/* Images for the first slide */}
+          <Image
+            src="/assets/cvsu1.jpg"
+            alt="Image 1"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/cvsu2.jpg"
+            alt="Image 2"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/cvsu3.jpg"
+            alt="Image 3"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          />
+          <Image
+            src="/assets/cvsu4.jpg"
+            alt="Image 4"
+            width={400} // Adjust the width as needed
+            height={300} // Adjust the height as needed
+          /></div>
+        {/* Content for the first slide */}
+        <div>
+        <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-left">
+          In a dedicated effort to address gender-related issues, CvSU MOVE KATROPA, in collaboration with the Campus Extension Services Office, recently organized an orientation session on Men Opposed to Violence Against Women Everywhere (MOVE) and Kalalakihang Tapat sa Responsibilidad at Obligasyon sa Pamilya (KATROPA) on February 8, 2023, at the campus AVR. This insightful event witnessed the active participation of faculty and staff members from the campus.
+          </p><br></br>
+          <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-left">
+          Prof. Janine B. Bacosmo, extending a warm welcome to the participants, provided an overview of the program and underscored the individual duties and responsibilities of the attendees. Additionally, she emphasized the program&apos;s expectations and highlighted its significance in the context of extension efforts.
+
+The event featured Prof. Maria Andrea C. Francia, Chair of the Department of Management, introducing Prof. King David J. Agreda as the esteemed resource speaker, adding further expertise and insights to the orientation.
+          </p>
+        </div>
+        
+        </div></div>
+      
+    
+  </Carousel>
+</ParallaxLayer>
+
         {/* Footer */}
         <ParallaxLayer
-  offset={7.1}
+  offset={12}
   speed={0.1}
   factor={1}
   style={{
@@ -391,7 +601,7 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
 </ParallaxLayer>
         
 <ParallaxLayer
-  offset={7}
+  offset={12}
   speed={1}
   style={{
     backgroundImage: "url(/assets/dd.png)",

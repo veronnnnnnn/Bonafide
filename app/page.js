@@ -39,7 +39,7 @@ export default function Home() {
 
   return (
     <div className="w-full h-full top-0 left-0">
-      <Parallax pages={7} ref={parallax}>
+      <Parallax pages={8} ref={parallax}>
       {/* <ParallaxLayer
           offset={0.89}
           speed={-1}
@@ -534,11 +534,11 @@ export default function Home() {
         </ParallaxLayer>
 
         <ParallaxLayer offset={6} speed={0}>
-          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-200"></div>
+        <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-50"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={5.2} speed={0.8}>
         <div
-    className="w-full h-full bg-[url('/assets/banner.png')] bg-cover bg-no-repeat"
+    className="w-full h-full bg-[url('/assets/banner2.png')] bg-cover bg-no-repeat"
     
   />
         </ParallaxLayer>
@@ -565,24 +565,73 @@ export default function Home() {
     </div>
 </ParallaxLayer>
         
-        
+              
+<ParallaxLayer
+  offset={6} // Adjust the offset as needed
+  speed={0.5} // Adjust the speed as needed
+  style={{
+    padding: "5%", // Adjust the padding as needed
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    flexDirection: "column", // Set the flex direction to column
+    backgroundColor: "#477D64",
+  }}
+>
+  <h1 className="font-montserrat font-extrabold text-2xl md:text-3xl lg:text-4xl text-white pb-2 md:pb-4 text-center">
+  Meet the officers of CvSU MOVE KATROPA, alongside MOVE National President, Mr. Reynaldo G. De Guia:    </h1>
+  <p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+  President: King David Agreda, Cavite City Campus
+</p>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Vice President: Leonard Paunil, Carmona Campus
+</p>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Secretary: Louigi Arayata, Cavite City Campus
+</p>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Treasurer: Carlo Emil Manabo, Carmona Campus
+</p>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Public Information Officer (P.I.O.): Marc Kenneth Nazareno, Cavite City Campus
+</p><br></br>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Additionally, the Planning and Monitoring Committee comprises the following members:
+</p>
+<p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Chair: Richard Perez, Rosario Campus
+</p><p className="font-montserrat font-normal text-sm md:text-base lg:text-xl text-white text-center">
+Co-Chair: Robert Jon Bayan, Carmona Campus</p>
+  <div style={{ display: 'flex',justifyContent: 'center', alignItems: 'center', marginTop: '50px'}}>
+  <Image
+  src="/assets/members.jpg"
+  alt="Image 1"
+  width={500} // Adjust the width as needed
+  height={300} // Adjust the height as needed or use "auto" to maintain aspect ratio
+/>
+  </div>
+
+</ParallaxLayer>
 
         {/* Project Creators */}
-        <ParallaxLayer offset={6.4} speed={0.8}>
+        <ParallaxLayer offset={7.4} speed={0.8}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[85%] rotate-90" />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[80%] rotate-180" />
         </ParallaxLayer>
-        <ParallaxLayer offset={6.2} speed={0.8}>
+        <ParallaxLayer offset={7.2} speed={0.8}>
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[14%] -rotate-90" />
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[5%]" />
         </ParallaxLayer>
-        <ParallaxLayer offset={6.3} speed={0}>
+        <ParallaxLayer offset={7} speed={0}>
+          <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-50"></div>
+        </ParallaxLayer>
+        <ParallaxLayer offset={7.3} speed={0}>
           <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4">
             Project Creators
           </h1>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={6.3}
+          offset={7.3}
           speed={-0.1}
           factor={1 / 2}
           className="flex pt-12 justify-center items-center"
@@ -644,7 +693,7 @@ export default function Home() {
 `}</style>
         </ParallaxLayer>
         <ParallaxLayer
-          offset={6.3}
+          offset={7.3}
           speed={0.2}
           factor={1 / 2}
           className="w-full flex flex-row justify-around"
@@ -711,17 +760,17 @@ export default function Home() {
   }
 `}</style>
         </ParallaxLayer>
-        <ParallaxLayer offset={6} speed={0.5}>
+        <ParallaxLayer offset={7} speed={0.5}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[60%] rotate-180" />
           <div className="w-[5%] h-[10%] ml-[40%] " />
         </ParallaxLayer>
-        <ParallaxLayer offset={6} speed={0.2}>
+        <ParallaxLayer offset={7} speed={0.2}>
           <div className="w-[10%] h-[20%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[10%] " />
           <div className="w-[5%] h-[10%] bg-[url('/assets/male-symbol.png')] bg-contain bg-no-repeat opacity-5 block ml-[70%] rotate-45" />
         </ParallaxLayer>
 
         {/* Footer */}
-        <ParallaxLayer offset={7.1} speed={-0.2}>
+        <ParallaxLayer offset={8.1} speed={-0.2}>
           <footer className="flex flex-col pb-6 px-6 lg:px-12">
             <hr className="bg-[#63A683] h-1 rounded-sm "></hr>
             <div className="flex flex-row flex-wrap justify-center lg:justify-between max-lg:gap-2 mt-4">
