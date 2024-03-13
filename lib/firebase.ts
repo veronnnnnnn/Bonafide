@@ -84,4 +84,37 @@ export default class Firebase {
       return { status: 400 };
     }
   }
+
+  // Method to fetch events from the database
+  async getEvents() {
+    try {
+      const eventsCollection = collection(db, "events");
+      const eventsSnapshot = await getDocs(eventsCollection);
+      const eventsData = eventsSnapshot.docs.map(doc => ({
+        id: doc.id,
+        ...doc.data()
+      }));
+      return eventsData;
+    } catch (error) {
+      console.error("Error fetching events:", error);
+      throw error; // Re-throw the error to handle it in the calling component
+    }
+  }
+
+  // Method to add user registration details to the "Registration" table
+  async addRegistration(eventId: string, name: string, email: string) {
+    try {
+      const registrationRef = await addDoc(collection(db, "registration"), {
+        eventId,
+        name,
+        email,
+        timestamp: new Date(),
+      });
+      console.log("Registration added with ID: ", registrationRef.id);
+      return { status: 200 };
+    } catch (error) {
+      console.error("Error adding registration: ", error);
+      return { status: 500 };
+    }
+  }
 }

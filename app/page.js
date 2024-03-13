@@ -548,6 +548,7 @@ export default function Home() {
               type="button"
               className="w-fit flex bg-[#FF0A59] text-white py-8 px-20 justify-center rounded-full font-montserrat text-xl font-semibold cursor-pointer mb-4"
              // onClick={handleRegisterClick}
+             onClick={() => router.push("/register")}
               >
               Register Now
             </button>
