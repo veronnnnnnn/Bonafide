@@ -14,7 +14,7 @@ const firebase = new Firebase();
 
 export default function DiscussionForum() {
   const router = useRouter();
-  const [showPrivacyPrompt, setShowPrivacyPrompt] = useState(true);
+  // const [showPrivacyPrompt, setShowPrivacyPrompt] = useState(true);
 
   const [posts, setPosts] = useState([]);
 
@@ -22,12 +22,12 @@ export default function DiscussionForum() {
   const [currentPage, setCurrentPage] = useState(0);
   const [paginatedPosts, setPaginatedPosts] = useState([]);
   const [pageCount, setPageCount] = useState(0);
-  useEffect(() => {
-    const privacyAccepted = localStorage.getItem("privacyAccepted");
-    if (privacyAccepted) {
-      setShowPrivacyPrompt(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   const privacyAccepted = localStorage.getItem("privacyAccepted");
+  //   if (privacyAccepted) {
+  //     setShowPrivacyPrompt(false);
+  //   }
+  // }, []);
   
 
   useEffect(() => {
@@ -75,46 +75,46 @@ export default function DiscussionForum() {
       setShowPostModal(false);
     }, 2000);
   };
-  const handleAcceptPrivacy = () => {
-    localStorage.setItem("privacyAccepted", "true");
-     setShowPrivacyPrompt(false);
-    };
+  // const handleAcceptPrivacy = () => {
+  //   localStorage.setItem("privacyAccepted", "true");
+  //    setShowPrivacyPrompt(false);
+  //   };
   return (
-    <div>
-    {showPrivacyPrompt && (
-        <div className="modal">
-        <div className="modal-content">
-          <h2>Data Privacy Compliance</h2>
-          <p>
-            We care about your data and want to ensure that you have control over how it&apos;s used.
-          </p>
-          <p>
-            At this Discussion Forum, we take your privacy seriously, and we are committed to protecting your personal information. Before you engage with our platform, we want to ensure that you understand how we handle your data and your rights regarding your personal information.
-          </p>
-          <div className="privacy-policy-section">
-            <h1>1. Data Collection</h1>
-            <p>We do not collect personally identifiable information without your consent.</p>
+    // <div>
+    // {showPrivacyPrompt && (
+    //     <div className="modal">
+    //     <div className="modal-content">
+    //       <h2>Data Privacy Compliance</h2>
+    //       <p>
+    //         We care about your data and want to ensure that you have control over how it&apos;s used.
+    //       </p>
+    //       <p>
+    //         At this Discussion Forum, we take your privacy seriously, and we are committed to protecting your personal information. Before you engage with our platform, we want to ensure that you understand how we handle your data and your rights regarding your personal information.
+    //       </p>
+    //       <div className="privacy-policy-section">
+    //         <h1>1. Data Collection</h1>
+    //         <p>We do not collect personally identifiable information without your consent.</p>
       
-            <h1>2. Data Usage</h1>
-            <p>Your data is used to enable you to post, comment, and interact on our platform. Your data may be used to improve our services and enhance your experience of our Discussion Forum.</p>
+    //         <h1>2. Data Usage</h1>
+    //         <p>Your data is used to enable you to post, comment, and interact on our platform. Your data may be used to improve our services and enhance your experience of our Discussion Forum.</p>
       
-            <h1>3. Data Security</h1>
-            <p>Access to your data is restricted to authorized personnel only.</p>
+    //         <h1>3. Data Security</h1>
+    //         <p>Access to your data is restricted to authorized personnel only.</p>
       
-            <h1>4. Data Sharing</h1>
-            <p>We do not share your data with third parties for marketing purposes. In the interest of maintaining anonymity, we discourage sharing of personally identifiable information in public posts. We may share your data with law enforcement agencies if required by law.</p>
+    //         <h1>4. Data Sharing</h1>
+    //         <p>We do not share your data with third parties for marketing purposes. In the interest of maintaining anonymity, we discourage sharing of personally identifiable information in public posts. We may share your data with law enforcement agencies if required by law.</p>
       
-            <p>By using the Freedom Wall, you consent to this privacy policy and the processing of your data as described herein. Please take a moment to review this privacy policy carefully. By continuing to use our platform, you acknowledge that you have read and accepted this data privacy compliance notice. If you have any questions or concerns, please contact our support team.</p>
-          </div>
-          <div className="modal-buttons">
-            <button onClick={handleAcceptPrivacy}>Accept</button>
+    //         <p>By using the Freedom Wall, you consent to this privacy policy and the processing of your data as described herein. Please take a moment to review this privacy policy carefully. By continuing to use our platform, you acknowledge that you have read and accepted this data privacy compliance notice. If you have any questions or concerns, please contact our support team.</p>
+    //       </div>
+    //       <div className="modal-buttons">
+    //         <button onClick={handleAcceptPrivacy}>Accept</button>
           
-          </div>
-        </div>
-      </div>
+    //       </div>
+    //     </div>
+    //   </div>
       
-      )}
-      {!showPrivacyPrompt && (
+    //   )}
+    //   {!showPrivacyPrompt && (
         <div>
     <Parallax pages={4}>
       <ParallaxLayer offset={0} speed={0} factor={4}>
@@ -168,7 +168,7 @@ export default function DiscussionForum() {
             onClick={() => router.push("/")}
           /></div>
                   <div className="flex flex-col justify-center items-center gap-2">
-          <h1 className="font-montserrat font-bold text-2xl md:text-4xl text-center">
+          <h1 className="font-montserrat font-bold text-2xl md:text-4xl text-center text-black">
               Discussion Forum
             </h1>
             <h6 className="font-montserrat font-medium text-sm md:text-lg text-black text-center">
@@ -233,6 +233,6 @@ export default function DiscussionForum() {
               activeClassName={"active"}
             /></div>
       </ParallaxLayer>
-    </Parallax></div>)}</div>
+    </Parallax></div>
   );
 }

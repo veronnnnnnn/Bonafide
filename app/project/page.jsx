@@ -389,13 +389,15 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Image
       src="/assets/event2.jpg"
       alt="Image 1"
-      style={{ width: '37%',marginRight: '8px', height: 'auto'}} // Adjust the marginRight and width as needed
-    />
+      width={500} // Set the desired width here
+      height={500} // Set the desired height here
+      style={{ marginRight: '8px' }}/>
     <Image
       src="/assets/event1.jpg"
       alt="Image 2"
-      style={{ width: '40%', marginLeft: '8px', height: 'auto' }} // Adjust the marginLeft and width as needed
-    />
+      width={540} // Set the desired width here
+      height={600} // Set the desired height here
+      style={{ marginLeft: '8px'}}/>
   </div>
 
 </ParallaxLayer>
@@ -459,12 +461,15 @@ style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
     <Image
       src="/assets/e5.jpg"
       alt="Image 1"
-      style={{ width: '40%',marginRight: '8px', height: 'auto'}} // Adjust the marginRight and width as needed
+      width={500} // Set the desired width here
+  height={500} // Set the desired height here
+  style={{ marginLeft: '8px', maxWidth: '40%', width: '100%', height: 'auto' }} // Adjust the marginRight and width as needed
     />
     <Image
       src="/assets/e6.jpg"
-      alt="Image 2"
-      style={{ width: '40%', marginLeft: '8px', height: 'auto' }} // Adjust the marginLeft and width as needed
+      width={500} // Set the desired width here
+  height={500} // Set the desired height here
+  style={{ marginLeft: '8px', maxWidth: '40%', width: '100%', height: 'auto' }} // Adjust the marginLeft and width as needed
     />
   </div>
 

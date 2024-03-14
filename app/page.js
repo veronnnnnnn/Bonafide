@@ -20,6 +20,13 @@ export default function Home() {
 
   const router = useRouter();
 
+  const [showPrivacyPrompt, setShowPrivacyPrompt] = useState(true);
+  useEffect(() => {
+    const privacyAccepted = localStorage.getItem("privacyAccepted");
+    if (privacyAccepted) {
+      setShowPrivacyPrompt(false);
+    }
+  }, []);
   
   // const [currentPage, setCurrentPage] = useState(0); // Assuming the initial page is 1
 
@@ -36,8 +43,48 @@ export default function Home() {
   //     parallax.current.scrollTo(currentPage - 1); // Adjust this line based on how you need to handle the scrolling
   //   }
   // };
+  const handleAcceptPrivacy = () => {
+    localStorage.setItem("privacyAccepted", "true");
+    setShowPrivacyPrompt(false);
+   };
 
   return (
+    <div>
+    {showPrivacyPrompt && (
+        <div className="modal">
+        <div className="modal-content">
+          <h2>Data Privacy Compliance</h2>
+          <p>
+            We care about your data and want to ensure that you have control over how it&apos;s used.
+          </p>
+          <p>
+            At this Parallax Website, we take your privacy seriously, and we are committed to protecting your personal information. Before you engage with our platform, we want to ensure that you understand how we handle your data and your rights regarding your personal information.
+          </p>
+          <div className="privacy-policy-section">
+            <h1>1. Data Collection</h1>
+            <p>We do not collect personally identifiable information without your consent.</p>
+      
+            <h1>2. Data Usage</h1>
+            <p>Your data is used to enable you to submit form, post, comment, and interact on our platform. Your data may be used to improve our services and enhance your experience of our Parallax Website.</p>
+      
+            <h1>3. Data Security</h1>
+            <p>Access to your data is restricted to authorized personnel only.</p>
+      
+            <h1>4. Data Sharing</h1>
+            <p>We do not share your data with third parties for marketing purposes. In the interest of maintaining anonymity, we discourage sharing of personally identifiable information in public posts. We may share your data with law enforcement agencies if required by law.</p>
+      
+            <p>By using the Parallax Website, you consent to this privacy policy and the processing of your data as described herein. Please take a moment to review this privacy policy carefully. By continuing to use our platform, you acknowledge that you have read and accepted this data privacy compliance notice. If you have any questions or concerns, please contact our support team.</p>
+          </div>
+          <div className="modal-buttons">
+            <button onClick={handleAcceptPrivacy}>Accept</button>
+          
+          </div>
+        </div>
+      </div>
+      
+      )}
+      {!showPrivacyPrompt && (
+        <div>
     <div className="w-full h-full top-0 left-0">
       <Parallax pages={8} ref={parallax}>
       {/* <ParallaxLayer
@@ -626,7 +673,7 @@ Co-Chair: Robert Jon Bayan, Carmona Campus</p>
           <div className="w-full h-full bg-gradient-to-b from-green-50 via-green-100 to-green-50"></div>
         </ParallaxLayer>
         <ParallaxLayer offset={7.3} speed={0}>
-          <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4">
+          <h1 className="font-montserrat font-extrabold text-center text-3xl lg:text-[24px] text-[10px] xt-[10px]text-[#2F8859] pb-4 text-black">
             Project Creators
           </h1>
         </ParallaxLayer>
@@ -799,6 +846,6 @@ Co-Chair: Robert Jon Bayan, Carmona Campus</p>
           </footer>
         </ParallaxLayer>
       </Parallax>
-    </div>
+    </div></div>)}</div>
   );
 }
